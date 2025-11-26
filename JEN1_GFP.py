@@ -29,12 +29,20 @@
 # ![xxx.png](attachment:cb4cbe49-62dd-438e-ba74-98d478664ea9.png)
 
 # %%
+# if pydna_utils is not istalled, change the import below to:
+# from pydna.genbank import genbank 
 from pydna_utils.genbank import genbank
+
+# %%
 from pydna.parsers import parse_primers
 from pydna.amplify import pcr
 from pydna.assembly2 import homologous_recombination_integration
 
+# %% [markdown]
+# Primers from Table 2 above. [Free Online OCR](https://www.newocr.com/) was used to extract the primer sequences, since the table seems to be an image in the PDF document.
+
 # %%
+
 s1, s2, k2, k3, a1, a2 = parse_primers("""
 >S1
 GATTCGAACGTCTCAAAGACATATGAGGAGCATATTGAGACCGTTAGTAAAGGAGAAGAACTTTTC
@@ -50,9 +58,15 @@ GGCCTATCCAAGGATGCTGTC
 GGCCCATTCAGTGCAAGAACC
 """)
 
+# %% [markdown]
+# The pFA6a-GFPS65T-kanMX6 plasmid has the genbank accession number AJ002682.1
+
 # %%
 template = genbank("AJ002682.1")
 assert template.seguid() == 'ldseguid=zH5VDEw2UM9jjLVdEco_oZxzwss'
+
+# %%
+template.description
 
 # %%
 cassette = pcr(s1, s2, template)
@@ -61,6 +75,12 @@ cassette = pcr(s1, s2, template)
 locus = genbank("BK006944.2", 22234, 26159)
 assert locus.seguid() == 'ldseguid=ZlCe_azWtYuHbKGWof0KX1LBlFs'
 
+# %% [markdown]
+# The locus contain JEN1 and the downstream URA1 gene. The link below goes to NCBI.
+
+# %%
+locus
+
 # %%
 JEN1_GFP_locus, = homologous_recombination_integration(locus, [cassette])
 assert JEN1_GFP_locus.seguid() == 'ldseguid=yNNY448oU9oK0PGj3lAJMMQgtLs'
@@ -68,12 +88,17 @@ assert JEN1_GFP_locus.seguid() == 'ldseguid=yNNY448oU9oK0PGj3lAJMMQgtLs'
 # %%
 JEN1_GFP_locus.name = "JEN1_GFP_locus"
 JEN1_GFP_locus.stamp()
+
+# %%
 JEN1_GFP_locus.comment("""\
 The S. cerevisiae JEN1 orf c-terminally tagged with GFP from pFA6a-GFPS65T-KanMX6.
 """)
 
 # %%
 print(JEN1_GFP_locus.format())
+
+# %% [markdown]
+# Diagnostic PCR from the B panel above. The published results are given as comments:
 
 # %%
 pcr(a1, a2, locus) # 1000 bp
