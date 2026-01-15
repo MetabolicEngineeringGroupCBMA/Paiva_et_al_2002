@@ -1,0 +1,41 @@
+LOCUS       jen1-gfp                 853 aa            linear   UNA 15-JAN-2026
+DEFINITION  JEN1-GFP.
+ACCESSION   .
+VERSION     .
+DBSOURCE    .
+KEYWORDS    .
+SOURCE      natural protein sequence
+  ORGANISM  unspecified
+REFERENCE   1  (residues 1 to 853)
+  AUTHORS   .
+  TITLE     Direct Submission
+  JOURNAL   Exported Jan 15, 2026 from SnapGene 8.2.1
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..853
+                     /organism="unspecified"
+     Region          1..616
+                     /note="color: #00ffff"
+                     /calculated_mol_wt=69332
+                     /label=JEN1
+     Region          617..853
+                     /note="color: #00ff00"
+                     /calculated_mol_wt=26841
+                     /label=GFP
+ORIGIN
+        1 msssitdeki sgeqqqpagr klyyntstfa epplvdgegn pinyepevyn pdheklyhnp
+       61 slpaqsiqdt rddellervy sqdqgveyee deedkpnlsa asiksyaltr ftsllhihef
+      121 swenvnpipe lrkmtwqnwn yffmgyfawl saawaffcvs vsvaplaely drptkditwg
+      181 lglvlfvrsa gavifglwtd kssrkwpyit clflfviaql ctpwcdtyek flgvrwitgi
+      241 amggiygcas ataiedapvk arsflsglff sayamgfifa iifyrafgyf rddgwkilfw
+      301 fsiflpilli fwrllwpetk yftkvlkark lilsdavkan ggeplpkanf kqkmvsmkrt
+      361 vqkywllfay lvvllvgpny lthasqdllp tmlraqlgls kdavtvivvv tnigaicggm
+      421 ifgqfmevtg rrlglliact mggcftypaf mlrsekailg agfmlyfcvf gvwgilpihl
+      481 aelapadara lvaglsyqlg nlasaaasti etqladrypl erdasgavik edyakvmail
+      541 tgsvfiftfa cvfvghekfh rdlsspvmkk yinqveeyea dglsisdive qktecasvkm
+      601 idsnvsktye ehietvskge elftgvvpil veldgdvngh kfsvsgegeg datygkltlk
+      661 ficttgklpv pwptlvttft ygvqcfsryp dhmkrhdffk sampegyvqe rtiffkddgn
+      721 yktraevkfe gdtlvnriel kgidfkedgn ilghkleyny nshnvyimad kqkngikvnf
+      781 kirhniedgs vqladhyqqn tpigdgpvll pdnhylstqs alskdpnekr dhmvllefvt
+      841 aagithgmde lyk
+//
